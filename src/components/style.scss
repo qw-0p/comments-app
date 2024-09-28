@@ -1,3 +1,5 @@
+@import '../styles/fonts.scss';
+
 .item-list {
 	margin: 50px auto;
 	display: flex;
@@ -14,6 +16,9 @@
 	margin-bottom: 50px;
 	display: flex;
 	flex-direction: column;
+	border-width: 1.5px;
+	border-style: solid;
+	border-color:#FFFFFF #808080 #808080 #FFFFFF;
 
 	&__input {
 		background: #eee;
@@ -25,6 +30,8 @@
 		outline: none;
 		resize: none;
 		padding: 5px 10px;
+				font-family: 'W95FA';
+		font-weight: 400;
 	}
 	&__input:focus {
 		outline: 1px solid #000;
@@ -50,16 +57,12 @@
   		border-color:#FFFFFF #808080 #808080 #FFFFFF;
   		padding:0;
   		font-size:16px;
-  		font-weight: 800;
-  		font-family:Tahoma;
+  		font-weight: 400;
   		text-align:center;
 		}
 	}
 	&__btn {
 		align-self: center;
-		font-family:"MS Sans Serif";
-		border: 1px solid #FFFFFF #808080 #808080 #FFFFFF;
-		outline:1px solid #000000;
 		background:#C0C0C0;
 	}
 	&__btn:focus {
@@ -67,9 +70,11 @@
 	}
 	&__accept-btn {
 		margin-bottom: 40px;
-		font-size:22px;
-		font-weight: 200;
+		font-size:17px;
+		font-weight: 400;
 		padding: 5px 15px;
+		font-family: 'W95FA';
+		font-weight: 400;
 	}
 }
 

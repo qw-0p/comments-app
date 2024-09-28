@@ -40,7 +40,7 @@ const Item: React.FC<CommentType> = ({ body, id, fullName }) => {
 				<button onClick={handleDelete} className='item__btn'>&#9747;</button>
 			</div>
 			<textarea data-gramm="false" value={value} className='item__input' onChange={handleOnChange} />
-			<button onClick={handleChangeComment} className='item__btn item__accept-btn'>OK</button>
+			<button onClick={handleChangeComment} className='item__btn item__accept-btn'>Ok</button>
 		</div>
 	)
 }
