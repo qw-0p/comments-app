@@ -87,3 +87,16 @@
 		font-size: 30px;
 	}
 }
+
+.loader {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	overflow: hidden;
+	img {
+		width: 50%;
+	}
+}

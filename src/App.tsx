@@ -3,12 +3,14 @@ import { useAppDispatch, useAppSelector } from './hooks/hooks';
 import { fetchComments, setScrollPosition } from './store/reducers/appSlice';
 import ItemList from './components/ItemList';
 import Navbar from './components/Navbar';
+import Loader from './components/Loader';
 
 
 
 function App() {
   const dispatch = useAppDispatch()
   const comments = useAppSelector(state => state.app.comments)
+  const loading = useAppSelector(state => state.app.loading)
   const scrollY = useAppSelector(state => state.app.scrollPosition)
   const scrollPosition = useRef(0);
 
@@ -36,9 +38,15 @@ function App() {
     }
   }, [dispatch, comments.length]);
   return (
+
     <div className='app-container'>
-      <Navbar />
-      <ItemList comments={comments} />
+      {
+        loading ? <Loader /> : <>
+          <Navbar />
+          <ItemList comments={comments} /></>
+      }
+
+
     </div>
   )
 }
