@@ -9,10 +9,11 @@ interface ItemListProps {
 
 const ItemList: React.FC<ItemListProps> = ({ comments }) => {
 	return (
-		<div className="item-list">
+		<div className="item-list" data-testid="item-list">
 			{
 				comments.map((item) => (
 					<Item
+						data-testid="item"
 						key={item.id}
 						{...item}
 					/>

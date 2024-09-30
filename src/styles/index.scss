@@ -1,0 +1,37 @@
+@import 'fonts';
+@import 'vars';
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $main-background-color;
+  margin: 0;
+  font-family: 'W95FA', sans-serif;
+}
+
+input, button {
+  font-family: 'W95FA', sans-serif;
+}
+
+.app-container {
+  position: relative;
+}
+
+
+button:focus {
+  outline: none;
+}
+
+button {
+  font-family: 'W95FA', sans-serif;
+  padding: 0;
+  background: $grey-light;
+  border-width: 1px;
+  font-size: 9px;
+  font-weight: bold;
+  text-align: center;
+  border-color: $grey-light-border-color;
+}
