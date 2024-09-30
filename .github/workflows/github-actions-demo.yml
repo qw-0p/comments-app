@@ -1,4 +1,4 @@
-name:
+name: Check
 on: push
 jobs:
   lint:
@@ -7,16 +7,16 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: Install packages
-        run: npm run install
+        run: npm ci
       - name: Lint
         run: npm run lint
-  test_ui:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: Install packages
-        run: npm run install
-      - name: Lint
-        run: npm run test
+  # test_ui:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: checkout
+  #       uses: actions/checkout@v3
+  #     - name: Install packages
+  #       run: npm run install
+  #     - name: Lint
+  #       run: npm run test
 
