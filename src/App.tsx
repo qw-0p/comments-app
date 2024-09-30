@@ -37,6 +37,7 @@ function App() {
       dispatch(fetchComments());
     }
   }, [dispatch, comments.length]);
+
   return (
 
     <div className='app-container'>

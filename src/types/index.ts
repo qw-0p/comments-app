@@ -12,7 +12,7 @@ export interface FetchDataType {
 
 export type CommentType = Pick<FetchDataType, 'id' | 'body'> & {
 	fullName?: string
-	username?: string
+	userName?: string
 }
 
 export type AppState = {
