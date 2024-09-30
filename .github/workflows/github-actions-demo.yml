@@ -1,5 +1,7 @@
 name: Check
+
 on: push
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -8,26 +10,22 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'  # Вы можете указать нужную версию Node.js
+          node-version: '20'  # или любую версию Node, которую вы используете
           cache: 'pnpm'
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: |
+          npm install -g pnpm
+          echo "pnpm version:"
+          pnpm --version  # Проверяем версию для диагностики
+
+      - name: Print PATH
+        run: echo $PATH  # Проверяем переменную PATH
 
       - name: Install deps
         run: pnpm install --frozen-lockfile
 
       - name: Lint
         run: pnpm run lint
-  # test_ui:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: checkout
-  #       uses: actions/checkout@v3
-  #     - name: Install packages
-  #       run: npm run install
-  #     - name: Lint
-  #       run: npm run test
-
