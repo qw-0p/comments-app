@@ -7,7 +7,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       - name: Install packages
-        run: pnpm ci
+        run: npm ci
       - name: Lint
-        run: pnpm run ling
+        run: npm run lint
 
