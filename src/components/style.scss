@@ -1,27 +1,24 @@
 @import '../styles/fonts.scss';
+@import '../styles/vars.scss';
 
 .item-list {
 	margin: 50px auto;
 	display: flex;
 	width: 80%;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	overflow-x: hidden;
 }
 
 .item {
-	width: 100%;
-	background:#C0C0C0;
+	background: $grey-light;
 	margin-bottom: 50px;
 	display: flex;
 	flex-direction: column;
 	border-width: 1.5px;
 	border-style: solid;
-	border-color:#FFFFFF #808080 #808080 #FFFFFF;
+	border-color: $grey-light-border-color;
 
 	&__input {
-		background: #eee;
 		align-self: center;
 		height: 100px;
 		margin: 50px 0;
@@ -30,62 +27,56 @@
 		outline: none;
 		resize: none;
 		padding: 5px 10px;
-				font-family: 'W95FA';
+		font-family: 'W95FA', sans-serif;
 		font-weight: 400;
 	}
 	&__input:focus {
-		outline: 1px solid #000;
+		outline: 1px solid $dark-color;
 	}
 	&__controls {
-  	background:#000080;
-  	color:#FFF;
+  		background: $title-color;
+  		color: $light-color;
 		display: flex;
 		justify-content: space-between;
-		align-items: center; 
-		padding: 0 5px;
+		align-items: center;
+		padding: 8px 5px;
 		p {
 			font-size: 18px;
-			padding: 0;
 			margin: 0;
 		}
 		button {
-			margin: 8px 0;
- 		 	width:22px;
-  		height:22px;
-  		background:#C0C0C0;
-  		border-width:1px;
-  		border-color:#FFFFFF #808080 #808080 #FFFFFF;
-  		padding:0;
-  		font-size:16px;
-  		font-weight: 400;
-  		text-align:center;
+ 		 	width: 22px;
+  			height: 22px;
+  			background: $grey-light;
+  			border-width: 1px;
+  			border-color: $grey-light-border-color;
+  			font-size: 16px;
 		}
 	}
 	&__btn {
 		align-self: center;
-		background:#C0C0C0;
+		background: $grey-light;
 	}
 	&__btn:focus {
-		outline:1px solid #000000;
+		outline: 1px solid $dark-color;
 	}
 	&__accept-btn {
 		margin-bottom: 40px;
-		font-size:17px;
+		font-size: 17px;
 		font-weight: 400;
 		padding: 5px 15px;
-		font-family: 'W95FA';
-		font-weight: 400;
+		font-family: 'W95FA', sans-serif;
 	}
 }
 
 .navbar {
 	position: fixed;
-	bottom: 0px;
+	bottom: 0;
 	width: 100%;
 	height: 42px;
 	padding: 0 4px;
 	display: flex;
-	background:#C0C0C0;
+	background: $grey-light;
 	justify-content: flex-start;
 	button {
 		width: 80px;
@@ -99,7 +90,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 	overflow: hidden;
 	img {
 		width: 50%;

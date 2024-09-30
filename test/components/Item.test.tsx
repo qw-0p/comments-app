@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { vi, describe, beforeEach, expect, test } from 'vitest';
+import { describe, beforeEach, expect, test } from 'vitest';
 import Item from '../../src/components/Item';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
@@ -18,7 +18,6 @@ const store = mockStore(initialState);
 
 describe('Item Component with Redux', () => {
 	beforeEach(() => {
-		vi.spyOn(Storage.prototype, 'setItem');
 		render(
 			<Provider store={store}>
 				<Item id={1} body="Test comment" fullName="John Doe" />
